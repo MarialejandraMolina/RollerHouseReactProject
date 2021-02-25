@@ -1,0 +1,28 @@
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 20%;
+}
+
+.logo {
+    background-color: white;
+}
+
+.logo h1 {
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.items a{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    
+}
