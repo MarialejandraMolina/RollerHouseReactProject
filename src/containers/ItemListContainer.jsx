@@ -20,4 +20,4 @@ const ItemListContainer = ({}) => {
     )
 };
 
-export default ItemListContainer
+export default ItemListContainer;
