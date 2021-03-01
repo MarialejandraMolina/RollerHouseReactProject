@@ -1,7 +1,7 @@
 import './App.css';
 import NavbarComponent from './components/navBar/index';
-// import ItemListContainer from './containers/ItemListContainer';
-import ItemCount from './components/ItemCount/ItemCount'
+import ItemListContainer from './containers/ItemListContainer';
+import ItemCount from './components/ItemCount/ItemCount';
 
 const App = () => {
 
@@ -20,7 +20,7 @@ const App = () => {
   return (
     <>
       <NavbarComponent />
-      {/* <ItemListContainer /> */}
+      <ItemListContainer />
       <ItemCount onAdd = {handleAdd} stock = {stock} inicial = {0}/>
     </>
   );

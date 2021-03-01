@@ -1,8 +1,8 @@
 import * as React from 'react';
 import productList from '../components/ItemList/productList';
-import ItemList from '../components/ItemList/ItemList';
+import ItemDetail from '../components/ItemList/ItemList';
 
-const ItemListContainer = ({}) => {
+const ItemDetailContainer = ({}) => {
     const [products, setProducts] = React.useState([])
 
     React.useEffect(() => {
@@ -15,9 +15,9 @@ const ItemListContainer = ({}) => {
 
     return (
         <div>
-            <ItemList products={products}/>
+            <ItemDetail products={products}/>
         </div>
     )
 };
 
-export default ItemListContainer
+export default ItemDetailContainer;
