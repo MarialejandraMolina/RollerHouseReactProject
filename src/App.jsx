@@ -2,6 +2,8 @@ import './App.css';
 import NavbarComponent from './components/navBar/index';
 import ItemListContainer from './containers/ItemListContainer';
 import ItemCount from './components/ItemCount/ItemCount';
+import ItemDetailContainer from './containers/ItemDetailContainer';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 const App = () => {
 
@@ -18,11 +20,20 @@ const App = () => {
   }
 
   return (
-    <>
+    <BrowserRouter>
       <NavbarComponent />
-      <ItemListContainer />
-      <ItemCount onAdd = {handleAdd} stock = {stock} inicial = {0}/>
-    </>
+      <Switch>
+        <Route exact path='/Patines'>
+          <ItemListContainer />
+        </Route>
+        <Route exact path='/Contador'>
+          <ItemCount onAdd = {handleAdd} stock = {stock} inicial = {0}/>
+        </Route>
+        <Route exact path='/Detail'>
+          <ItemDetailContainer />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 

@@ -1,14 +1,14 @@
 import React from 'react';
-import ItemD from '../ItemDetail/ItemD';
+import './ItemDetail.css';
 
-const ItemDetail = ({products}) => {
+const ItemDetail = ({nombre, precio, descripcion}) => {
     return (
-        <div>
-            {products.map((product) => {
-            return <ItemD key={product.id} product={product} />;
-            })}
-        </div>
-    );
+    <div className='item'>
+        <h1>{nombre}</h1>
+        <h2>{precio}</h2>
+        <p>{descripcion}</p>
+    </div>    
+);
 };
 
 export default ItemDetail;

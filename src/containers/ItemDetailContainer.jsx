@@ -1,21 +1,22 @@
 import * as React from 'react';
-import productList from '../components/ItemList/productList';
-import ItemDetail from '../components/ItemList/ItemList';
+import ItemDetail from '../components/ItemDetail/ItemDetail';
+import './ItemDetailContainer.css';
 
 const ItemDetailContainer = ({}) => {
     const [products, setProducts] = React.useState([])
 
     React.useEffect(() => {
         const myPromise = new Promise ((resolve, reject) => {
-            setTimeout (() => resolve(productList), 3000);
+            setTimeout (() => resolve(ItemDetail), 3000);
         });
         
         myPromise.then((result) => setProducts(result));
     }, []);
 
     return (
-        <div>
-            <ItemDetail products={products}/>
+        <div className='container'>
+            <img src="/img/blueMoon100.jpg" />
+            <ItemDetail nombre='RollerBlade Blue Moon 100' precio='$400' descripcion='El Powerslide SWELL Blue moon 100 presenta todos los nuevos estándares técnicos de la colección SWELL, una carcasa modificada con cortes flexibles, acolchado de memoria RECALL, un nuevo manguito más suave y delgado y un soporte TRINITY X para otras opciones de alineación de guías.' />
         </div>
     )
 };
