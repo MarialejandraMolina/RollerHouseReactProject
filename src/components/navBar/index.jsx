@@ -1,6 +1,7 @@
 import './navBar.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faShoppingCart} from '@fortawesome/free-solid-svg-icons'
+import {faShoppingCart} from '@fortawesome/free-solid-svg-icons';
+import {Link} from 'react-router-dom';
 
 
 const NavbarComponent = () => {
@@ -10,12 +11,12 @@ const NavbarComponent = () => {
                 <h1>RollerHouse</h1>
             </div>
             <div className="items">
-                <a href="#">PATINES</a>
-                <a href="#">LONGBOARD/SKATES</a>
-                <a href="#">QUADS/4RUEDAS</a>
-                <a href="#">ACCESORIOS</a>
-                <a href="#">CONTACTO</a>
-                <a href="#"><FontAwesomeIcon icon={faShoppingCart} /></a>
+                <Link to= {`patines`}>PATINES</Link>
+                <Link to= {`ls`}>LONGBOARD/SKATES</Link>
+                <Link to= {`q4`}>QUADS/4RUEDAS</Link>
+                <Link to= {`ac`}>ACCESORIOS</Link>
+                <Link to= {`co`}>CONTACTO</Link>
+                <Link to= {`sc`}><FontAwesomeIcon icon={faShoppingCart} /></Link>
             </div>
         </div>
     );
