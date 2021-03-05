@@ -1,6 +1,7 @@
 import * as React from 'react';
 import productList from '../components/ItemList/productList';
 import ItemList from '../components/ItemList/ItemList';
+import ItemCount from '../components/ItemCount/ItemCount';
 
 const ItemListContainer = ({}) => {
     const [products, setProducts] = React.useState([])
@@ -12,7 +13,7 @@ const ItemListContainer = ({}) => {
         
         myPromise.then((result) => setProducts(result));
     }, []);
-
+    
     return (
         <div>
             <ItemList products={products}/>
