@@ -1,5 +1,5 @@
 import React from 'react';
-import { card } from './Item.css';
+import {card} from './Item.css';
 import {Link} from 'react-router-dom';
 
 const Item = ({product}) => {

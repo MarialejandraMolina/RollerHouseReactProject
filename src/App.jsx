@@ -1,8 +1,11 @@
 import './App.css';
+// import {useState} from 'react';
 import NavbarComponent from './components/navBar/index';
 import ItemListContainer from './containers/ItemListContainer';
 import ItemDetailContainer from './containers/ItemDetailContainer';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {Switch, Route, BrowserRouter} from 'react-router-dom';
+import CartContext from './context/CartContext';
+import CartComponent from './components/cart/Cart';
 
 const App = () => {
 
@@ -17,8 +20,9 @@ const App = () => {
           }
       }
   }
-
+  
   return (
+    <CartContext>
     <BrowserRouter>
       <NavbarComponent />
       <Switch>
@@ -27,10 +31,20 @@ const App = () => {
         </Route>
         <Route exact path='/Detail'>
           <ItemDetailContainer />
+        </Route>        
+        <Route exact path='/Cart'>
+          <CartComponent />
         </Route>
       </Switch>
     </BrowserRouter>
+    </CartContext>
   );
 }
 
 export default App;
+
+
+
+
+
+// video min 1:18

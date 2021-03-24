@@ -1,16 +1,15 @@
-import * as React from 'react';
+import React, {useState, useEffect} from 'react';
 import ItemDetail from '../components/ItemDetail/ItemDetail';
 import './ItemDetailContainer.css';
 
 const ItemDetailContainer = ({}) => {
-    const [products, setProducts] = React.useState([])
+    const [products, setProducts] = useState([])
 
-    React.useEffect(() => {
+    useEffect(() => {
         const myPromise = new Promise ((resolve, reject) => {
             setTimeout (() => resolve(ItemDetail), 3000);
         });
-        
-        myPromise.then((result) => setProducts(result));
+            myPromise.then((result) => setProducts(result));
     }, []);
 
     return (

@@ -1,12 +1,11 @@
-import * as React from 'react';
+import React, {useState, useEffect} from 'react';
 import productList from '../components/ItemList/productList';
 import ItemList from '../components/ItemList/ItemList';
-import ItemCount from '../components/ItemCount/ItemCount';
 
 const ItemListContainer = ({}) => {
-    const [products, setProducts] = React.useState([])
+    const [products, setProducts] = useState([])
 
-    React.useEffect(() => {
+    useEffect(() => {
         const myPromise = new Promise ((resolve, reject) => {
             setTimeout (() => resolve(productList), 3000);
         });
